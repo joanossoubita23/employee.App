@@ -2,6 +2,26 @@ public class employee {
     private  String name;
     private String email;
     private long salary;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "employee{" +
+                "id=" + id +
+                '}';
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public employee(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -25,15 +45,6 @@ public class employee {
 
     public void setSalary(long salary) {
         this.salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return "employee{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", salary=" + salary +
-                '}';
     }
 
     public employee(String name, String email, long salary) {

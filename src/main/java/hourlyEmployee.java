@@ -1,25 +1,25 @@
 public class hourlyEmployee extends employee{
-    private  int timeWork;
-
-    public int getTimeWork() {
-        return timeWork;
+    public hourlyEmployee(int id) {
+        super(id);
     }
+    private int hourWork;
 
-    public void setTimeWork(int timeWork) {
-        this.timeWork = timeWork;
+    public int getHourWork() {
+        return hourWork;
     }
 
     @Override
     public String toString() {
         return "hourlyEmployee{" +
-                "timeWork=" + timeWork +
+                "hourWork=" + hourWork +
                 "} " + super.toString();
     }
 
-    public hourlyEmployee(String name, String email, long salary, int timeWork) {
-        super(name, email, salary);
-        this.timeWork = timeWork;
+    public void setHourWork(int hourWork) {
+        this.hourWork = hourWork;
     }
 
-
+    public hourlyEmployee(String name, String email, long salary) {
+        super(name, email, salary);
+    }
 }
